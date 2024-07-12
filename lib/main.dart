@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:team_quiz_app/notes.dart';
-import 'package:team_quiz_app/screens/category_screen.dart';
 import 'package:team_quiz_app/screens/landing_screen.dart';
 import 'package:team_quiz_app/screens/questions_screen.dart';
 import 'dart:io' show Platform;
@@ -17,9 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'quiz app',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: LandingScreen(),

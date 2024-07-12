@@ -4,9 +4,12 @@ import 'package:team_quiz_app/screens/questions_screen.dart';
 class CategoryCard extends StatelessWidget {
   final String quizName;
   final Color quizColor;
-  CategoryCard({
+  final List<Map<String, dynamic>> questions;
+
+  const CategoryCard({
     required this.quizName,
     required this.quizColor,
+    required this.questions,
     super.key,
   });
 
@@ -17,16 +20,22 @@ class CategoryCard extends StatelessWidget {
         onTap: () => Navigator.push(
           context,
           MaterialPageRoute<void>(
-            builder: (BuildContext context) => QuestionsScreen(),
+            builder: (BuildContext context) => QuestionsScreen(
+              questions: questions,
+              title: quizName,
+              color: quizColor,
+              
+            ),
           ),
         ),
         child: Container(
           color: quizColor,
           child: Center(
-              child: Text(
-            quizName,
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
-          )),
+            child: Text(
+              quizName,
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+            ),
+          ),
         ),
       ),
     );

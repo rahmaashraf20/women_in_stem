@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:team_quiz_app/screens/category_screen.dart';
 import 'package:team_quiz_app/utils/globals.dart';
-import 'package:team_quiz_app/utils/icons.dart';
+import '../utils/icons.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -18,7 +18,7 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 45, 112, 48),
         body: SingleChildScrollView(
           child: SizedBox(
-            height: MediaQuery.of(context).size.height,
+            height: MediaQuery.of(context).size.height ,
             width: MediaQuery.of(context).size.width,
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.end,
@@ -27,8 +27,8 @@ class LoginScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 50),
                     child: Image.asset(
-                      loginLogo,
-                      height: 150,
+                      alien,
+                      height: 100,
                       width: 150,
                     ),
                   ),
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold, fontSize: 40),
                         ),
                         const SizedBox(
-                          height: 12,
+                          height: 10,
                         ),
                         TextFormField(
                           controller: userNameController,
@@ -72,7 +72,7 @@ class LoginScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(30))),
                         ),
                         const SizedBox(
-                          height: 12,
+                          height: 10,
                         ),
                         TextFormField(
                           validator: (value) {
@@ -109,7 +109,7 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(
-                          height: 50,
+                          height: 40,
                         ),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -138,8 +138,8 @@ class LoginScreen extends StatelessWidget {
                           height: 24,
                         ),
                         Image.asset(
-                          fingerPrint,
-                          height: 50,
+                          fingerprint,
+                          height: 40,
                           width: 50,
                         ),
                         const SizedBox(
